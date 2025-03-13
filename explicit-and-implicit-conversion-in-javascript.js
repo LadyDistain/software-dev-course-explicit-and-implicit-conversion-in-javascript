@@ -18,15 +18,41 @@ Use console.log() to clearly show the before-and-after type conversions.
 
 */
 
+//Part 1
 
 let result = "5" - 2;
 console.log("The result is: " + result);
 
-let isValid = Boolean("false");
+/*
+This is correct and reguired no change.
+*/
+
+let isValid = Boolean("true");
 if (isValid) {
     console.log("This is valid!");
 }
 
+/*
+isValid is a truthy, so it needed to be changed to "true".
+*/
+
 let age = "25";
-let totalAge = age + 5;
+let totalAge = (Number(age) + 5);
 console.log("Total Age: " + totalAge);
+
+/*
+The variable age needed to be converted to a number from a string at line 39, so the numbers are added.
+*/
+
+// Part 2
+let currentYear = "2025";
+let birthYear = "1992";
+let myAge = (Number(currentYear) - Number(birthYear));
+
+console.log('You are ' + (myAge) + ' years old.');
+
+let bool1 = false;
+let num1 = null;
+bool1 == num1;
+
+console.log(num1 + bool1)
